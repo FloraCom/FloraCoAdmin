@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloraCo • Order Tracking</title>
+  <link rel="icon" type="image/x-icon" href="./media/fc.png">
+  <link rel="stylesheet" href="./styles/tracking.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>  
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="list">
+        <img src="./media/floraco.png" class="logo" id="floraco" />
+        <img src="./media/fc.png" class="logo" id="fc" />
+        <ul>
+          <li class="profile-list">
+            <a href="index.html" title="" class="profile-a">
+              <i class="fi fi-ss-dashboard-panel"></i>
+              <p class="profile-p">Dashboard</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="order.html" title="" class="profile-a">
+              <i class="fi fi-ss-order-history"></i>
+              <p class="profile-p">Orders</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="tracking.html" title="" class="profile-a selected">
+              <i class="fi fi-ss-location-alt"></i>
+              <p class="profile-p">Tracking</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="products.html" title="" class="profile-a">
+              <i class="fi fi-br-list"></i>
+              <p class="profile-p">Products</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="" title="" class="profile-a">
+              <i class="fi fi-ss-badge-percent"></i>
+              <p class="profile-p">Offers</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="" title="" class="profile-a">
+              <i class="fi fi-ss-bell-ring"></i>
+              <p class="profile-p">Notification</p>
+            </a>
+          </li>
+          <li class="profile-a">
+            <i class="fi fi-ss-exit"></i>
+            <p class="profile-p">Logout</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="rightContent">
+
+        <div class="head">
+          <div class="heading">
+            <h1>Order Tracking</h1>
+          </div>
+          <div class="date">
+            <input type="date" name="" value="" id="dateInput">
+          </div>
+        </div>
+
+        
+    <middle>
+
+      <div class="searchView">
+        <div class="searchBar">
+          <input id="search" list="searchList" type="search" name="" value="" placeholder="Search ProductID, Plants, Seeds, Soil, Fertilizers">
+            <datalist id="searchList">
+              <option value="">
+            </datalist>
+          <i class="fi fi-br-search" id="searchButton"></i>
+        </div>
+      </div>
+      
+      <p class="description" id="searchResult">123 Products</p>
+      
+      <div class="filters">
+          
+        <div class="dropdowns">
+          
+          <div class="drop">
+            <i class="fi fi-ss-category"></i>
+            <select class="choose" id="filter">
+              <option value="filter">Category</option>
+              <optgroup label="Plant">
+                <option value=""></option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="drop">
+            <i class="fi fi-br-bars-sort"></i>
+            <select class="choose" id="sort">
+              <option>Sort</option>
+              <optgroup label="Price">
+                <option value="">High to Low</option>
+                <option value="">Low to High</option>
+              </optgroup>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="table">
+        
+      <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Tracking ID</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status delivered">Delivered</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status delivered">Delivered</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="orID">
+            <p id="orID">#FCORAAA001</p>
+          </td>
+          <td class="product-info">
+            <p class="userId" id="usID">#FCUSAAA001</p>
+          <td class="status-info">
+            <p class="status pending">Pending</p>
+          </td>
+          <td class="date">
+            <p>01/02/25</p>
+          </td>
+          <td class="proceed">
+            <i class="fi fi-ss-right"></i>
+          </td>
+        </tr>
+      </table>
+      </div>
+
+      <div class="error">
+        <img src="./media/desert.png" alt="">
+        <h2>No Products Found :(</h2>
+      </div>
+
+    </middle>
+
+
+
+      </div>
+    </div>
+  </div>
+  <script src="scripts/tracking.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

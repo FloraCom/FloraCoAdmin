@@ -1,0 +1,427 @@
+:root {
+
+  --background-c: #E9FFEE;
+  --primary-c:  #023918;
+  --secondary-c:  #F99826;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: var(--background-c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left {
+  height: 100%;
+  min-width: 80px;
+  background-color: #a8d5ba;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#fc{
+  display: none;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+  display: block;
+  margin: 20px 0 0 10px;
+}
+
+.left ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-list{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #5F5F5F;
+}
+
+.profile-a{
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  padding: 20px 20px;
+  padding-right: 7vw;
+  padding-left: 3vw;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #5F5F5F;
+}
+
+.selected{
+  background-color: #b9e6ca;
+  color: var(--primary-c);
+}
+
+.right {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  height:100%;
+  background-color: #a8d5ba;
+}
+
+.rightContent{
+  height: 98%;
+  width: 99%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  padding: 1.2rem;
+  overflow-y: scroll;
+}
+
+.rightContent::-webkit-scrollbar{
+  width: 10px;
+}
+
+.rightContent::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.rightContent::-webkit-scrollbar-thumb{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: var(--secondary-c);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.description{
+  color: gray;
+  padding: 10px 0;
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading{
+  color: var(--primary-c);
+}
+
+middle{
+  height: 100%;
+  width: 100%;
+}
+
+.searchView{
+  width: 100%;
+  display: flex;
+}
+
+.searchBar{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#search{
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-radius:  5px 0 0 5px;
+  padding: 0 10px;
+  color: var(--primary-c);
+}
+
+option{
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+#searchButton{
+  padding: 10px;
+  background-color: var(--secondary-c);
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#searchButton:hover{
+  background-color: #CF6907;
+}
+
+
+.filters{
+  width: 100%;
+  display: none;
+  justify-content: center;
+  background-color: var(--background-c);
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  padding: 2% 10%;
+}
+
+.drop{
+  background-color: var(--primary-c);
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 5px
+}
+
+.drop i{
+  color: white;
+  padding: 10px;
+  background-color: var(--primary-c);
+}
+
+.choose{
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--primary-c);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding-right: 10px;
+}
+
+.products {
+  display: flex;
+  align-items: start;
+  padding: 25px 0;
+}
+
+.products ul{
+  width: 100%;
+  display: block;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+.productCard {
+  width: 100%;
+  margin: 5px 0;
+  padding: 3px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.cardA {
+  text-decoration: none;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cardImg {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--background-c);
+}
+
+.cardImageView {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardImageView:hover{
+  transform: scale(1.05);
+}
+
+.cardText {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 0;
+}
+
+.category {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.title{
+  margin: 0;
+  padding: 5px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-c);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+}
+
+.priceSpan{
+  padding: 10px 0;
+  font-size: 0.7rem;
+  color: grey;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.2rem;
+  color: green;
+}
+
+.cardA button {
+  display: none;
+  color: white;
+  background-color: var(--secondary-c);
+  border: none;
+  margin: 10px 0px;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cardA button:hover{
+  background-color: #CF6907;
+}
+
+.error{
+  background-color: var(--background-c);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.open{
+  display: flex;
+}
+
+.error img {
+  width: 25%;
+  aspect-ratio: 1/1;
+}
+
+.error h2{
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-c);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+  .profile-p{
+    display: none;
+  }
+
+  #fc{
+    display: block;
+  }
+
+  #floraco{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 750px){
+
+  .head{
+    display: block;
+  }
+
+  .cardA{
+    display: block;
+  }
+
+  #prId{
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+
+  .title{
+    font-size: 0.8rem;
+  }
+
+  .date{
+    margin: 10px 0;
+  }
+
+}
+@media screen and (max-width: 550px){
+
+
+}
+
