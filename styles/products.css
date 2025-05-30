@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 :root {
 
-  --background-c: #E9FFEE;
-  --primary-c:  #023918;
-  --secondary-c:  #F99826;
+  --forest-green: #2F5233;
+  --sage: #A8BBA2;
+  --terra-cotta: #D08C60;
+  --cream-sand: #F5F1E6;
+  --charcoal:  #333333;
+  --brushed-gold: #C8B273;
+  --burnished-copper: #B87333;
+  --soft-silver: #C0C0C0;
+
+  --background-c: var(--cream-sand);
+  --primary-c:  var(--charcoal);
+  --secondary-c:  var(--forest-green);
 
 }
+
 
 * {
   margin: 0;
@@ -15,7 +27,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Lato', sans-serif;
   background: var(--background-c);
   display: flex;
   align-items: center;
@@ -34,36 +46,61 @@ body, html {
 }
 
 .left {
-  height: 100%;
-  min-width: 80px;
-  background-color: #a8d5ba;
+  flex-shrink: 0;
+  background-color: var(--background-c);
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.logo{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 10px;
+}
+
+.logo img{
+  height: 50px;
 }
 
 #fc{
   display: none;
 }
 
-.logo {
-  width: auto;
-  height: 50px;
-  display: block;
-  margin: 20px 0 0 10px;
+.left::-webkit-scrollbar{
+  width: 5px;
+}
+
+.left::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.left::-webkit-scrollbar-thumb{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: var(--secondary-c);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .left ul{
   height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .profile-list{
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #5F5F5F;
 }
@@ -78,13 +115,17 @@ body, html {
   padding-right: 7vw;
   padding-left: 3vw;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: #5F5F5F;
 }
 
+.profile-a:hover{
+  background-color: #D6D2C7;
+}
+
 .selected{
-  background-color: #b9e6ca;
+  background-color: #D6D2C7;
   color: var(--primary-c);
 }
 
@@ -93,9 +134,9 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
-  height:100%;
-  background-color: #a8d5ba;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-c);
 }
 
 .rightContent{
@@ -104,7 +145,7 @@ body, html {
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 10px black;
-  padding: 1.2rem;
+  padding: 1rem;
   overflow-y: scroll;
 }
 
@@ -125,35 +166,86 @@ body, html {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+.rightContent h1{
+  color: var(--primary-c);
+  font-size: 1.5rem;
+  font-family: "PlayFair Display", sans-serif;
+}
+
 .description{
   color: gray;
   padding: 10px 0;
+  font-family: "Lato", sans-serif;
 }
 
-.head{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.heading{
-  color: var(--primary-c);
-}
-
-middle{
-  height: 100%;
+.content{
   width: 100%;
+  height: 100%;
+}
+
+.categories{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  padding: 10px 0;
+}
+
+.categories ul{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ctgryCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoryCard a{
+  text-decoration: none;
+}
+
+.ctgryImg{
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.ctgryImageView{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform ease 0.5s;
+}
+
+.ctgryImageView:hover{
+  transform: scale(1.1);
+}
+
+.ctgryText{
+  color: var(--primary-c);
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.title{
+  text-decoration: none;
 }
 
 .searchView{
   width: 100%;
   display: flex;
+  justify-content: start;
+  padding: 10px 0;
 }
 
 .searchBar{
-  width: 75%;
+  width: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,117 +262,80 @@ middle{
 }
 
 option{
-  color: white;
-  height: 100%;
-  width: 100%;
-  padding: 10px;
+  cursor: pointer;
 }
 
 #searchButton{
   padding: 10px;
-  background-color: var(--secondary-c);
+  background-color: var(--primary-c);
   color: white;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
 #searchButton:hover{
-  background-color: #CF6907;
+  background-color: var(--secondary-c);
 }
 
-
-.filters{
-  width: 100%;
-  display: none;
-  justify-content: center;
-  background-color: var(--background-c);
-}
-
-.dropdowns {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  padding: 2% 10%;
-}
-
-.drop{
-  background-color: var(--primary-c);
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  gap: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  padding-left: 5px
-}
-
-.drop i{
-  color: white;
-  padding: 10px;
-  background-color: var(--primary-c);
-}
-
-.choose{
-  width: 100px;
-  height: 100%;
-  overflow: hidden;
-  background-color: var(--primary-c);
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  padding-right: 10px;
+#searchResult{
+  font-weight: 800;
+  color: darkslateblue;
 }
 
 .products {
   display: flex;
-  align-items: start;
-  padding: 25px 0;
+  flex-direction: column;
+  justify-content: start;
+  padding-bottom: 25px;
 }
 
 .products ul{
-  width: 100%;
-  display: block;
+  width: 90%;
+  height: 100%;
   list-style: none;
+  display: block;
   gap: 1rem;
   padding: 0;
 }
 
 .productCard {
   width: 100%;
-  margin: 5px 0;
   padding: 3px;
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.productCard:hover{
+  background-color: #eee;
 }
 
 .cardA {
   text-decoration: none;
-  padding: 5px;
   width: 100%;
+  padding: 5px;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
   justify-content: start;
+}
+
+#prId{
+  margin-bottom: 5px;
 }
 
 .card {
   width: 100%;
   display: flex;
-  gap: 10px;
   align-items: center;
 }
 
 .cardImg {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   overflow: hidden;
-  border-radius: 5px;
-  background-color: var(--background-c);
+  border-radius: 10px;
+  background-color: var(--primary-c);
 }
 
 .cardImageView {
@@ -295,52 +350,104 @@ option{
 
 .cardText {
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  padding: 5px 0;
+  font-family: 'Lato', sans-serif;
+  padding:  0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.cardText .title{
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.off{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
 }
 
 .category {
   margin: 0;
   padding: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: gray;
+  font-family: 'Lato', sans-serif;=
+  text-transform: uppercase;
+}
+
+.productOffer{
+  width: 50px;
+  padding: 2px;
+  margin: 0;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  text-align: center;
+  animation:  offer 8s ease infinite;
+}
+
+
+@keyframes offer {
+  0%, 75%{ 
+    background-color: lightgreen;
+    color: black;
+  }
+  35%, 100%{
+    background-color: green;
+    color: white;
+  }
 }
 
 .title{
   margin: 0;
-  padding: 5px 0;
   font-size: 1rem;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: var(--primary-c);
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-            line-clamp: 2; 
+  word-wrap: break-word;
+}
+
+.prices{
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .priceSpan{
-  padding: 10px 0;
+  padding: 0;
+  margin: 0;
   font-size: 0.7rem;
   color: grey;
   font-weight: 400;
   text-decoration: line-through;
+  text-decoration-color: red;
 }
 
 .price {
   margin: 0;
   font-size: 1.2rem;
-  color: green;
+  font-weight: 600;
+  color: var(--burnished-copper);
+}
+
+.price::before{
+  content: 'Rs.';
+  font-size: 1rem;
 }
 
 .cardA button {
-  display: none;
   color: white;
-  background-color: var(--secondary-c);
+  background-color: var(--primary-c);
   border: none;
+  display: none;
   margin: 10px 0px;
   padding: 8px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   font-size: 0.8rem;
   cursor: pointer;
@@ -348,39 +455,10 @@ option{
 }
 
 .cardA button:hover{
-  background-color: #CF6907;
+    background-color: var(--secondary-c);
 }
 
-.error{
-  background-color: var(--background-c);
-  width: 100%;
-  height: 100vh;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.open{
-  display: flex;
-}
-
-.error img {
-  width: 25%;
-  aspect-ratio: 1/1;
-}
-
-.error h2{
-  font-family: 'Poppins', sans-serif;
-  color: var(--primary-c);
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-
-
-@media screen and (max-width: 850px){
+@media screen and (max-width: 800px){
 
   .profile-p{
     display: none;
@@ -394,34 +472,46 @@ option{
     display: none;
   }
 
-}
-
-@media screen and (max-width: 750px){
-
-  .head{
-    display: block;
+  .categories ul{
+    gap: 5px;
   }
 
-  .cardA{
-    display: block;
+  .ctgryImg{
+    width: 50px;
+    height: 50px;
   }
 
-  #prId{
-    font-size: 0.8rem;
-    margin: 5px 0;
-  }
-
-  .title{
-    font-size: 0.8rem;
-  }
-
-  .date{
-    margin: 10px 0;
+  .ctgryText{
+    font-size: 0.5rem;
   }
 
 }
-@media screen and (max-width: 550px){
 
+@media screen and (max-width: 400px){
 
+  .rightContent{
+    padding: 0.9rem;
+  }
+
+  .card{
+    flex-direction: column;
+  }
+
+  #fc{
+    display: none;
+  }
+
+  .ctgryCard{
+    align-items: start;
+  }
+
+  .ctgryText{
+    max-width: 80px;
+    text-align: start;
+  }
+
+  .prices, .off{
+    flex-direction: column;
+    align-items: start;
+  }
 }
-

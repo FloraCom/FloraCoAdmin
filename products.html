@@ -17,12 +17,14 @@
 
   <div class="container">
     <div class="left">
+      <div class="logo">
+        <img src="./media/fc.png" alt="" id="fc">
+        <img src="./media/floraco.png" alt="" id="floraco">
+      </div>
       <div class="list">
-        <img src="./media/floraco.png" class="logo" id="floraco" />
-        <img src="./media/fc.png" class="logo" id="fc" />
         <ul>
           <li class="profile-list">
-            <a href="index.html" title="" class="profile-a">
+            <a href="dashboard.html" title="" class="profile-a">
               <i class="fi fi-ss-dashboard-panel"></i>
               <p class="profile-p">Dashboard</p>
             </a>
@@ -46,7 +48,7 @@
             </a>
           </li>
           <li class="profile-list">
-            <a href="" title="" class="profile-a">
+            <a href="offers.html" title="" class="profile-a">
               <i class="fi fi-ss-badge-percent"></i>
               <p class="profile-p">Offers</p>
             </a>
@@ -66,1161 +68,138 @@
     </div>
     <div class="right">
       <div class="rightContent">
-
-        <div class="head">
-          <div class="heading">
+          <div class="content">
             <h1>Products</h1>
+              <div class="ctgris">
+                <div class="categories">
+                  <ul>
+                    <li class="categoryCard">
+                      <a href="products.html?category=floral-supply" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/floral.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Floral<br>Supply</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=plant" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/plants.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Plants</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=tree" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/outdoor.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Trees</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=seed" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/seeds.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Seeds</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=bulb" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/bulbs.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Bulbs</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=soil" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/soil.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Soil</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=fertilizer" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/fertilizer.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Fertilizers</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=pot-and-vase" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/pot.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Pots &<br>Vases</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="categoryCard">
+                      <a href="products.html?category=gardening-tool" class="cardA">
+                        <div class="ctgryCard">
+                          <div class="ctgryImg">
+                            <img class="ctgryImageView" src="./media/tool.png">
+                          </div>
+                          <div class="ctgryText">
+                            <h3 class="title">Gardening<br>Tools</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="searchView">
+                <div class="searchBar">
+                  <input id="search" list="searchList" type="search" name="" value="" placeholder="Search ProductID, Plants, Seeds, Soil, Fertilizers">
+                  <i class="fi fi-br-search" id="searchButton"></i>
+                </div>
+              </div>
+              <p class="description" id="searchResult"></p>
+              <div class="products">
+                <ul id="productsList">
+                </ul>
+              </div>
+
           </div>
-        </div>
-
-        
-    <middle>
-
-      <div class="searchView">
-        <div class="searchBar">
-          <input id="search" list="searchList" type="search" name="" value="" placeholder="Search ProductID, Plants, Seeds, Soil, Fertilizers">
-            <datalist id="searchList">
-              <option value="">
-            </datalist>
-          <i class="fi fi-br-search" id="searchButton"></i>
-        </div>
-      </div>
-      
-      <p class="description" id="searchResult">123 Products</p>
-      
-      <div class="filters">
-          
-        <div class="dropdowns">
-          
-          <div class="drop">
-            <i class="fi fi-ss-category"></i>
-            <select class="choose" id="filter">
-              <option value="filter">Category</option>
-              <optgroup label="Plant">
-                <option value=""></option>
-              </optgroup>
-            </select>
-          </div>
-
-          <div class="drop">
-            <i class="fi fi-br-bars-sort"></i>
-            <select class="choose" id="sort">
-              <option>Sort</option>
-              <optgroup label="Price">
-                <option value="">High to Low</option>
-                <option value="">Low to High</option>
-              </optgroup>
-            </select>
-          </div>
-
-        </div>
-      </div>
-      
-      <div class="products">
-        <ul>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-          <li class="productCard">
-            <a href="product.html?id=rose-plant" class="cardA">
-                  <p class="category" id="prId">#FCPRD0001</p>
-              <div class="card">
-                <div class="cardImg">
-                  <img class="cardImageView" src="./media/plcover.png">
-                </div>
-                <div class="cardText">
-                  <p class="category">Plant</p>
-                  <h3 class="title">Rfghdfghdosa Plantisorias hjfhjfghjfghj</h3>
-                  <span class="priceSpan">499.00</span>
-                  <h3 class="price">350.00</h3>
-                </div>
-              </div>
-              <button>Add To Cart</button>
-            </a>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="error">
-        <img src="./media/desert.png" alt="">
-        <h2>No Products Found :(</h2>
-      </div>
-
-    </middle>
-
-
-
       </div>
     </div>
   </div>
-  <script src="scripts/products.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="scripts/products.js" type="module" charset="utf-8" async defer></script>
 </body>
 </html>
