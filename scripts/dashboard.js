@@ -453,7 +453,7 @@ async function setBar(totalSold) {
 		tbody.innerHTML += `
 				<tr>
                   <td>#${index+1}</td>
-                  <td class="product-info"><img src="${item.variations[0].image}" onerror="src='../media/fc.png';" alt="${item.name}">${item.name}</td>
+                  <td class="product-info"><img src="${item.variations[0].image}" onerror="this.onerror=null;src='../media/fc.png';" alt="${item.name}">${item.name}</td>
                   <td>Rs.${item.variations[0].price}</td>
                   <td>${item.parentCategory.replace('-', ' ').charAt(0).toUpperCase()+item.parentCategory.replace('-', ' ').slice(1)}</td>
                   <td class="actions"><a href="https://floracom.github.io/FloraCoProduct/index.html?category=${item.parentCategory}&sub=${item.subCategory}&id=${item.id}" target="_blank">EDIT</a></td>
