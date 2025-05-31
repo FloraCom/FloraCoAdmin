@@ -72,7 +72,8 @@ function populateContent(products) {
 	let content = document.getElementById('productsList');
 	content.innerHTML = '';
 
-	document.getElementById('searchResult').innerHTML = products.length + ' Products Found';
+	let size = 0;
+
 	
 	products = Object.values(products);
 
@@ -80,11 +81,13 @@ function populateContent(products) {
 
 	products.forEach((obj, index) => {
 
+
 		productDict[obj.id] = obj;
 
 		filterProducts.push(obj);
 		obj.variations.forEach((variant) => {
 
+			size++;
 			const li = document.createElement('li');
 			li.className = 'productCard';
 			li.innerHTML = `
@@ -112,6 +115,7 @@ function populateContent(products) {
 			content.appendChild(li);
 		});
 	});
+	document.getElementById('searchResult').innerHTML = size + ' Products Found';
 }
 
 function filterSearch(){

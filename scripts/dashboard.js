@@ -35,7 +35,10 @@ let x = [];
 const yearDisplay = document.getElementById("yearDisplay");
 const monthGrid = document.getElementById("monthGrid");
 
+
+
 const yearSelect = document.getElementById('yearSelect');
+document.getElementById('monthSelect').value = selectedMonth;
 
 for (let i = currentYear - 5; i <= currentYear + 10; i++) {
   const option = document.createElement('option');

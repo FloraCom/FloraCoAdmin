@@ -78,7 +78,7 @@
 
             <div class="searchView">
               <div class="searchBar">
-                <input id="search" list="searchList" type="number" placeholder="Search mail">
+                <input id="search" list="searchList" type="text" placeholder="Search mail">
                 <i class="fi fi-br-search" id="searchButton"></i>
               </div>
             </div>
@@ -86,11 +86,14 @@
             <div class="table-card">
               <div class="table-header">
                 <h3>User Feedbacks</h3>
+                <div>
+                  <button id="read">Mark as Read</button>
+                </div>
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th><input type="checkbox" name=""></th>
+                    <th><input type="checkbox" name="" id="selectAll"></th>
                     <th>User</th>
                     <th>Category</th>
                     <th>Sub</th>
@@ -110,6 +113,7 @@
           </div>
       </div>
     </div>
+      <div id="toast"></div>
   </div>
   <script src="scripts/feedback.js" type="module" charset="utf-8" async defer></script>
 </body>

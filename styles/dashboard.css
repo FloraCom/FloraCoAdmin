@@ -145,7 +145,7 @@ body, html {
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 10px black;
-  padding: 1.2rem;
+  padding: 0.9rem;
   overflow-y: scroll;
 }
 
@@ -356,7 +356,6 @@ canvas{
   background: white;
 }
 .picker-container {
-  background: white;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: start;
@@ -460,7 +459,6 @@ select {
   padding: 20px;
   border-radius: 12px;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .city {
   margin-bottom: 16px;
@@ -487,17 +485,16 @@ select {
 
 
 .table-card {
-  background: white;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding:  20px 0;
   margin: auto;
+  overflow-x: scroll;
 }
 
 .table-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   margin-bottom: 20px;
 }
 
