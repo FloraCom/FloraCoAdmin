@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FloraCo • Dashboard</title>
-<link rel="icon" type="image/x-icon" href="./media/fc.png">
-<link rel="stylesheet" href="./styles/dashboard.css">
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>  
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloraCo • Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="./media/fc.png">
+  <link rel="stylesheet" href="./styles/dashboard.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>  
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
 </head>
 <body>
 
-<div class="container">
-  <div class="left">
-    <div class="logo">
-      <img src="./media/fc.png" alt="" id="fc">
-      <img src="./media/floraco.png" alt="" id="floraco">
+  <div class="container">
+    <div class="left">
+      <div class="logo">
+        <img src="./media/fc.png" alt="" id="fc">
+        <img src="./media/floraco.png" alt="" id="floraco">
+      </div>
+      <div class="list">
+        <ul>
+          <li class="profile-list">
+            <a href="dashboard.html" title="" class="profile-a selected">
+              <i class="fi fi-ss-dashboard-panel"></i>
+              <p class="profile-p">Dashboard</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="order.html" title="" class="profile-a">
+              <i class="fi fi-ss-order-history"></i>
+              <p class="profile-p">Orders</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="tracking.html" title="" class="profile-a">
+              <i class="fi fi-ss-location-alt"></i>
+              <p class="profile-p">Tracking</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="products.html" title="" class="profile-a">
+              <i class="fi fi-br-list"></i>
+              <p class="profile-p">Products</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="offers.html" title="" class="profile-a">
+              <i class="fi fi-ss-badge-percent"></i>
+              <p class="profile-p">Offers</p>
+            </a>
+          </li>
+          <li class="profile-list">
+            <a href="feedback.html" title="" class="profile-a">
+              <i class="fi fi-ss-feedback"></i>
+              <p class="profile-p">Feedbacks</p>
+            </a>
+          </li>
+          <li class="profile-a">
+            <i class="fi fi-ss-exit"></i>
+            <p class="profile-p">Logout</p>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="list">
-      <ul>
-        <li class="profile-list">
-          <a href="dashboard.html" title="" class="profile-a selected">
-            <i class="fi fi-ss-dashboard-panel"></i>
-            <p class="profile-p">Dashboard</p>
-          </a>
-        </li>
-        <li class="profile-list">
-          <a href="order.html" title="" class="profile-a">
-            <i class="fi fi-ss-order-history"></i>
-            <p class="profile-p">Orders</p>
-          </a>
-        </li>
-        <li class="profile-list">
-          <a href="tracking.html" title="" class="profile-a">
-            <i class="fi fi-ss-location-alt"></i>
-            <p class="profile-p">Tracking</p>
-          </a>
-        </li>
-        <li class="profile-list">
-          <a href="products.html" title="" class="profile-a">
-            <i class="fi fi-br-list"></i>
-            <p class="profile-p">Products</p>
-          </a>
-        </li>
-        <li class="profile-list">
-          <a href="offers.html" title="" class="profile-a">
-            <i class="fi fi-ss-badge-percent"></i>
-            <p class="profile-p">Offers</p>
-          </a>
-        </li>
-        <li class="profile-list">
-          <a href="" title="" class="profile-a">
-            <i class="fi fi-ss-bell-ring"></i>
-            <p class="profile-p">Notification</p>
-          </a>
-        </li>
-        <li class="profile-a">
-          <i class="fi fi-ss-exit"></i>
-          <p class="profile-p">Logout</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="right">
-    <div class="rightContent">
+    <div class="right">
+      <div class="rightContent">
         <div class="content">
           <h1 id="head">Dashboard</h1>
 
+          <div class="picker-container">
+            <h2>Select Month and Year</h2>
+            <div class="selectors">
+              <select id="monthSelect">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+
+              <select id="yearSelect"></select>
+            </div>
+
           <div class="stats">
-            
+
             <div class="tile">
               <div class="tileContent">
                 <div class="tileTop">
@@ -85,7 +106,7 @@
                 <div class="details">
                   <div class="percent" id="earningsDiv">
                   </div>
-                  <p class="description" id="earningDesc">This month so far</p>
+                  <p class="description" id="earningsDesc">This month so far</p>
                 </div>
               </div>
             </div>
@@ -110,13 +131,13 @@
               <div class="tileContent">
                 <div class="tileTop">
                   <div class="sign">
-                    <i class="fi fi-ss-user"></i>
+                    <i class="fi fi-ss-location-alt"></i>
                   </div>
-                  <p class="title">Customers</p>  
+                  <p class="title">Total Orders</p>  
                 </div>
-                <h1 class="number" id="customers">0</h1>
+                <h1 class="number" id="totalOrders">0</h1>
                 <div class="details">
-                  <p class="description">All Customers</p>
+                  <p class="description">All time</p>
                 </div>
               </div>
             </div>
@@ -150,38 +171,84 @@
                 </div>
               </div>
             </div>
+            <div class="tile">
+              <div class="tileContent">
+                <div class="tileTop">
+                  <div class="sign">
+                    <i class="fi fi-ss-user"></i>
+                  </div>
+                  <p class="title">Customers</p>  
+                </div>
+                <h1 class="number" id="customers">0</h1>
+                <div class="details">
+                  <p class="description">All Customers</p>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="graph">
 
             <div id="chart">
               <div class="chartHead">
                 <h3>Sales</h3>
-                <p>Sales generate over the year</p>
+                <p>Sales generated over the year</p>
               </div>
               <canvas id="statsChart"></canvas>
             </div>
-            <div class="calendar">
-                <div class="calendar-container">
-                  <div class="calendar-header">
-                    <button id="decreaseYear">&#8249;</button>
-                    <span id="yearDisplay"></span>
-                    <button id="increaseYear">&#8250;</button>
-                  </div>
-                  <div class="month-grid" id="monthGrid"></div>
-                </div>
-            </div>  
+            
+            <div class="card" id="topPlant">
+              <h3>Sales</h3>
+
+              <div class="city">
+                <div class="label"><span>New York</span><span>72K</span></div>
+                <div class="bar"><div class="bar-fill" style="width: 100%;"></div></div>
+              </div>
+
+              <div class="city">
+                <div class="label"><span>San Francisco</span><span>39K</span></div>
+                <div class="bar"><div class="bar-fill" style="width: 54%;"></div></div>
+              </div>
+
+              <div class="city">
+                <div class="label"><span>Sydney</span><span>25K</span></div>
+                <div class="bar"><div class="bar-fill" style="width: 35%;"></div></div>
+              </div>
+
+              <div class="city">
+                <div class="label"><span>Singapore</span><span>61K</span></div>
+                <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+              </div>
+            </div>
           </div>
 
-          <div class="products">
-            <div class="order-items" id="order-items">
+          
+          <div class="table-card">
+            <div class="table-header">
+              <h3>Top Selling Products</h3>
+              <div>
+                <button id="seeAll">See All</button>
+              </div>
             </div>
-          </div>  
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product Name</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="productList">
+              </tbody>
+            </table> 
+          </div>
         </div>
+      </div>
+      <div id="toast"></div>
     </div>
-  </div>
-  <div id="toast"></div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<script src="scripts/dashboard.js" type="module" charset="utf-8" async defer></script>
-</body>
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="scripts/dashboard.js" type="module" charset="utf-8" async defer></script>
+  </body>
+  </html>

@@ -145,7 +145,7 @@ body, html {
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 10px black;
-  padding: 1rem;
+  padding: 1.2rem;
   overflow-y: scroll;
 }
 
@@ -169,7 +169,10 @@ body, html {
 .rightContent h1{
   color: var(--primary-c);
   font-size: 1.5rem;
-  font-family: "PlayFair Display", sans-serif;
+}
+
+#head{
+  font-family: 'Playfair Display', serif;
 }
 
 .description{
@@ -178,63 +181,30 @@ body, html {
   font-family: "Lato", sans-serif;
 }
 
-.content{
-  width: 100%;
-  height: 100%;
-}
-
-.categories{
-  width: 100%;
-  overflow: hidden;
+.date {
+  margin: 10px 0;
   display: flex;
-  justify-content: start;
-  padding: 10px 0;
-}
-
-.categories ul{
-  display: flex;
-  list-style: none;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.ctgryCard{
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
-.categoryCard a{
-  text-decoration: none;
+.date p{
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  color: var(--primary-c);
 }
 
-.ctgryImg{
-  width: 70px;
-  height: 70px;
-  border-radius: 20px;
-  background-color: white;
-  overflow: hidden;
-}
-
-.ctgryImageView{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform ease 0.5s;
-}
-
-.ctgryImageView:hover{
-  transform: scale(1.1);
-}
-
-.ctgryText{
+#dateInput{
+  background-color: var(--background-c);
+  padding: 8px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  width: 130px;
   color: var(--primary-c);
   text-align: center;
-  font-size: 0.7rem;
-}
-
-.title{
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .searchView{
@@ -259,10 +229,7 @@ body, html {
   border-radius:  5px 0 0 5px;
   padding: 0 10px;
   color: var(--primary-c);
-}
-
-option{
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 #searchButton{
@@ -282,183 +249,112 @@ option{
   color: darkslateblue;
 }
 
-.products {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding-bottom: 25px;
-}
-
-.products ul{
-  width: 90%;
-  height: 100%;
-  list-style: none;
-  display: block;
-  gap: 1rem;
-  padding: 0;
-}
-
-.productCard {
+#showMore{
   width: 100%;
-  padding: 3px;
-  background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 8px;
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.productCard:hover{
-  background-color: #eee;
+#loadMore{
+  padding: 5px 10px;
+  background-color: var(--primary-c);
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.cardA {
+#loadMore:hover{
+  background-color: var(--secondary-c);
+}
+
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h3 {
+  margin: 0;
+}
+
+.table-header button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  font-size: 14px;
+  color: #888;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+#productList a{
+  color: blue;
+  font-size: 15px;
   text-decoration: none;
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
 }
 
-#prId{
-  margin-bottom: 5px;
-}
-
-.card {
-  width: 100%;
+.product-info {
   display: flex;
   align-items: center;
 }
 
-.cardImg {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: var(--primary-c);
-}
-
-.cardImageView {
-  width: 100%;
-  height: 100%;
+.product-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  margin-right: 10px;
   object-fit: cover;
 }
 
-.cardImageView:hover{
-  transform: scale(1.05);
-}
-
-.cardText {
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  padding:  0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  word-wrap: break-word;
-  overflow: hidden;
-}
-
-.cardText .title{
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.off{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: start;
-}
-
-.category {
-  margin: 0;
-  padding: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: gray;
-  font-family: 'Lato', sans-serif;=
-  text-transform: uppercase;
-}
-
-.productOffer{
-  width: 50px;
-  padding: 2px;
-  margin: 0;
-  font-size: 0.7rem;
-  border-radius: 5px;
-  text-align: center;
-  animation:  offer 8s ease infinite;
-}
-
-
-@keyframes offer {
-  0%, 75%{ 
-    background-color: lightgreen;
-    color: black;
-  }
-  35%, 100%{
-    background-color: green;
-    color: white;
-  }
-}
-
-.title{
-  margin: 0;
-  font-size: 1rem;
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  color: var(--primary-c);
-  word-wrap: break-word;
-}
-
-.prices{
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.priceSpan{
-  padding: 0;
-  margin: 0;
-  font-size: 0.7rem;
-  color: grey;
-  font-weight: 400;
-  text-decoration: line-through;
-  text-decoration-color: red;
-}
-
-.price {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--burnished-copper);
-}
-
-.price::before{
-  content: 'Rs.';
-  font-size: 1rem;
-}
-
-.cardA button {
-  color: white;
-  background-color: var(--primary-c);
-  border: none;
-  display: none;
-  margin: 10px 0px;
-  padding: 8px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
+.actions {
+  font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-.cardA button:hover{
-    background-color: var(--secondary-c);
+input[type="checkbox"] {
+  transform: scale(1.2);
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
 
   .profile-p{
     display: none;
@@ -472,42 +368,11 @@ option{
     display: none;
   }
 
-  .categories ul{
-    gap: 5px;
+  #chart{
+    width: 100%;
   }
 
-  .ctgryImg{
-    width: 50px;
-    height: 50px;
-  }
-
-  .ctgryText{
-    font-size: 0.5rem;
-  }
-
-}
-
-@media screen and (max-width: 400px){
-
-  .rightContent{
-    padding: 0.9rem;
-  }
-
-  .card{
+  .graph{
     flex-direction: column;
-  }
-
-  .ctgryCard{
-    align-items: start;
-  }
-
-  .ctgryText{
-    max-width: 80px;
-    text-align: start;
-  }
-
-  .prices, .off{
-    flex-direction: column;
-    align-items: start;
   }
 }

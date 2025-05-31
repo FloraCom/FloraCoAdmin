@@ -28,25 +28,32 @@ let ordersdata = {};
 let productsdata = {};
 let totalSales = 0;
 let totalOrders = 0;
+let totalSold = 0;
 let x = [];
 
 
 const yearDisplay = document.getElementById("yearDisplay");
 const monthGrid = document.getElementById("monthGrid");
 
-setChart();
-renderCalendar();
+const yearSelect = document.getElementById('yearSelect');
 
-document.getElementById('increaseYear').addEventListener('click', ()=> changeYear(+1));
-document.getElementById('decreaseYear').addEventListener('click', ()=> changeYear(-1));
+for (let i = currentYear - 5; i <= currentYear + 10; i++) {
+  const option = document.createElement('option');
+  option.value = i;
+  option.textContent = i;
+  if (i === currentYear) option.selected = true;
+  yearSelect.appendChild(option);
+}
 
 
 setProducts(products => {
 
 	document.getElementById('inventory').innerHTML = products.length;
+	products = products;
 
 	salesData();
 	ordersData();
+	orderNo();
 	usersData();
 	productsData();
 
@@ -90,6 +97,20 @@ async function usersData(){
         if (snapshot.exists()) {
             const data = snapshot.val();
             document.getElementById('customers').innerHTML = data;
+        } else {
+            console.log("No data available");
+        }
+    }).catch((error) => {
+        console.error(error);
+    });
+}
+
+async function orderNo(){
+	const dataRef = ref(rdb, 'numericals/orderNo');
+	get(dataRef).then((snapshot) => {
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            document.getElementById('totalOrders').innerHTML = data;
         } else {
             console.log("No data available");
         }
@@ -154,6 +175,12 @@ async function updateSales(isAll){
 		totalSales = 0;
 	}
 
+	if (selectedMonth === new Date().getMonth()) {
+		document.getElementById('earningsDesc').innerHTML = 'This month so far';
+	}else{
+		document.getElementById('earningsDesc').innerHTML = 'Total earnings of '+months[selectedMonth];
+	}
+
 	document.getElementById('earnings').innerHTML = totalSales;
 }
 
@@ -196,6 +223,12 @@ async function updateOrders(isAll){
 			document.getElementById('ordersDiv').classList.remove('up');
 		}
 
+		if (selectedMonth === new Date().getMonth()) {
+			document.getElementById('orderDesc').innerHTML = 'This month so far';
+		}else{
+			document.getElementById('orderDesc').innerHTML = 'Total earnings of '+months[selectedMonth];
+		}
+
 	}
 
 	if (totalOrders === undefined) {
@@ -207,12 +240,13 @@ async function updateOrders(isAll){
 
 async function updateProducts(){
 
-	let totalSold = 0;
+	totalSold = 0;
 
 	Object.values(productsdata).forEach(product => {
 		totalSold += product;
 	});
 
+	setBar(totalSold);
 	document.getElementById('products').innerHTML = totalSold;
 }
 
@@ -295,7 +329,7 @@ function setChart(dataa, labelss){
 	                display:false
 	            },
 	            ticks: {
-	            	stepSize: 1000
+	            	stepSize: parseInt(((Math.max(...x)-Math.min(...x))/5))
 	            },
 	            beginAtZero:true
 	        }]
@@ -327,7 +361,6 @@ function renderCalendar() {
     div.classList.add("month");
     if (index === selectedMonth) div.classList.add("selected");
 
-
     div.onclick = () => {
 
 		if ((index <= new Date().getMonth() && parseInt(currentYear) === parseInt(new Date().getFullYear())) || (parseInt(currentYear) < parseInt(new Date().getFullYear()))) {
@@ -337,7 +370,7 @@ function renderCalendar() {
 			salesData();
 			ordersData();
 	    }else{
-	    	showToast('Invalid Year');
+	    	showToast('Invalid Month');
 	    }
 	};
     monthGrid.appendChild(div);
@@ -357,11 +390,21 @@ function changeYear(delta) {
   }else{
   	renderCalendar();
   }
-
 }
 
-function getIndex(arr, value){
-	return arr.findIndex((obj)=> obj['id'] === value);
+function getItem(arr, value){
+
+	let item = {};
+
+	Object.values(arr).forEach(obj => {
+
+		if (obj[value]) {
+			item = obj[value];
+		}
+
+	});
+
+	return item;
 }
 
 function setProducts(callBack) {
@@ -378,3 +421,87 @@ function setProducts(callBack) {
 
 	}).catch();
 }
+
+async function setBar(totalSold) {
+
+	const sortedArray = Object.entries(productsdata).sort(([, valueA], [, valueB]) => valueB - valueA);
+
+	const div = document.getElementById('topPlant');
+	div.innerHTML = `
+		<h3>Top 10 Products Sold</h3>
+		<br>
+	`;
+	const tbody = document.getElementById('productList');
+	tbody.innerHTML = ``;
+
+	sortedArray.slice(0, 10).forEach((obj, index) => {
+		
+		let item = getItem(products, 'FCPS'+obj[0]);
+
+		div.innerHTML += `
+
+		<div class="city">
+			<div class="label"><span>#${index+1} ${'FCPS'+obj[0]}</span><span>(${Math.ceil((parseInt(obj[1]) / totalSold)*100)}%) ${obj[1]}</span></div>
+			<div class="bar"><div class="bar-fill" style="width: ${Math.ceil((parseInt(obj[1]) / totalSold)*100)}%;"></div></div>
+		</div>
+
+		`;
+
+		tbody.innerHTML += `
+				<tr>
+                  <td>#${index+1}</td>
+                  <td class="product-info"><img src="${item.variations[0].image}" onerror="src='../media/fc.png';" alt="${item.name}">${item.name}</td>
+                  <td>Rs.${item.variations[0].price}</td>
+                  <td>${item.parentCategory.replace('-', ' ').charAt(0).toUpperCase()+item.parentCategory.replace('-', ' ').slice(1)}</td>
+                  <td class="actions"><a href="https://floracom.github.io/FloraCoProduct/index.html?category=${item.parentCategory}&sub=${item.subCategory}&id=${item.id}" target="_blank">EDIT</a></td>
+                </tr>
+		`;
+
+
+	});
+}
+
+document.getElementById('yearSelect').addEventListener('change' , ()=> {
+	currentYear = document.getElementById('yearSelect').value;
+
+	let index = parseInt(document.getElementById('monthSelect').value);
+
+	if ((index <= new Date().getMonth() && parseInt(currentYear) === parseInt(new Date().getFullYear())) || (parseInt(currentYear) < parseInt(new Date().getFullYear()))) {
+		selectedMonth = index;
+    }else{
+    	document.getElementById('yearSelect').value = new Date().getFullYear();
+    	document.getElementById('monthSelect').value = new Date().getMonth();
+    	showToast('Invalid Month');
+    }
+    selectedMonth = parseInt(document.getElementById('monthSelect').value);
+    currentYear = document.getElementById('yearSelect').value;
+
+	salesData();
+	ordersData();
+});
+
+document.getElementById('monthSelect').addEventListener('change', ()=> {
+	currentYear = document.getElementById('yearSelect').value;
+	
+	let index = parseInt(document.getElementById('monthSelect').value);
+
+	if ((index <= new Date().getMonth() && parseInt(currentYear) === parseInt(new Date().getFullYear())) || (parseInt(currentYear) < parseInt(new Date().getFullYear()))) {
+		selectedMonth = index;
+		
+    }else{
+    	document.getElementById('yearSelect').value = new Date().getFullYear();
+    	document.getElementById('monthSelect').value = new Date().getMonth();
+    	showToast('Invalid Month');
+    }
+    selectedMonth = parseInt(document.getElementById('monthSelect').value);
+	currentYear = document.getElementById('yearSelect').value;
+
+	salesData();
+	ordersData();
+});
+
+document.getElementById('seeAll').addEventListener('click', ()=> {
+
+	window.location.href = 'products.html';
+
+});

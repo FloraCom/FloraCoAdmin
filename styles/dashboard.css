@@ -188,15 +188,16 @@ body, html {
 
 .stats{
   width: 100%;
-  display: flex;
+  display: grid;
   gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
   padding: 10px 0;
   flex-wrap: wrap;
 }
 
 .tile{
   background-color: #333;
-  width: 300px;
+  width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
 }
@@ -327,8 +328,8 @@ body, html {
 
 .graph{
   display: flex;
+  justify-content: center;
   width: 100%;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -337,80 +338,49 @@ body, html {
 }
 
 #chart {
-  width: 50%;
-  flex-shrink: 0;
+  flex: 0 0 65%;
   overflow: hidden;
   border: 1px solid #ccc;
   margin: 0;
   display: flex;
+  flex-direction: column;
   padding: 10px;
-  justify-content: space-between;
   border-radius: 10px;
   background-color: #333;
-  flex-direction: column;
 }
 
 canvas{
   width: 100%;
-  height: 100%;
   margin: 10px 0 0 0;
   border-radius: 10px;
   background: white;
 }
-
-.calendar-container {
-  background: #333;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.picker-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: start;
 }
 
-.calendar-header {
+.picker-container h2 {
+  padding: 10px 0 0 5px;
+  font-size: 1.1rem;
+}
+
+.selectors {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.calendar-header button {
-  background: none;
-  border: none;
-  font-weight: 800;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-.calendar-header span {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.month-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
   gap: 10px;
+  padding:  0 0 10px 0;
 }
 
-.month {
-  padding: 10px 0;
-  border-radius: 12px;
-  background-color: #f4f3fe;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fefefe;
 }
-
-.month:hover {
-  background-color: #ccc;
-}
-
-.month.selected {
-  background-color: lightgreen;
-  font-weight: bold;
-}
-
 
 .order-items {
   margin-top: 20px;
@@ -452,6 +422,150 @@ canvas{
   font-size: 10px;
 }
 
+@media screen and (max-width: 1300px){
+  .stats{
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .stats{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 920px){
+  .stats{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 620px){
+  .stats{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px){
+  .stats{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  flex: 0 0 35%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.city {
+  margin-bottom: 16px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+.bar {
+  height: 4px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background-color: #A463F2;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h3 {
+  margin: 0;
+}
+
+.table-header button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  font-size: 14px;
+  color: #888;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+#productList a{
+  color: blue;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.actions {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
 
 @media screen and (max-width: 900px){
 
@@ -471,11 +585,7 @@ canvas{
     width: 100%;
   }
 
-}
-
-@media screen and (max-width: 500px){
-
-  .tile{
-    width: 100%;
+  .graph{
+    flex-direction: column;
   }
 }

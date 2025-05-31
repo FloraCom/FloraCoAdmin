@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FloraCo • Orders</title>
+  <title>FloraCo • Feedback</title>
   <link rel="icon" type="image/x-icon" href="./media/fc.png">
-  <link rel="stylesheet" href="./styles/order.css">
+  <link rel="stylesheet" href="./styles/feedback.css">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>  
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
@@ -30,7 +30,7 @@
             </a>
           </li>
           <li class="profile-list">
-            <a href="order.html" title="" class="profile-a selected">
+            <a href="order.html" title="" class="profile-a">
               <i class="fi fi-ss-order-history"></i>
               <p class="profile-p">Orders</p>
             </a>
@@ -54,7 +54,7 @@
             </a>
           </li>
           <li class="profile-list">
-            <a href="feedback.html" title="" class="profile-a">
+            <a href="feedback.html" title="" class="profile-a selected">
               <i class="fi fi-ss-feedback"></i>
               <p class="profile-p">Feedbacks</p>
             </a>
@@ -69,7 +69,7 @@
     <div class="right">
       <div class="rightContent">
           <div class="content">
-            <h1>Orders</h1>
+            <h1 id="head">Feedbacks</h1>
 
             <div class="date">
               <p>By Date</p>
@@ -78,14 +78,29 @@
 
             <div class="searchView">
               <div class="searchBar">
-                <input id="search" list="searchList" type="number" placeholder="Search Order ID">
+                <input id="search" list="searchList" type="number" placeholder="Search mail">
                 <i class="fi fi-br-search" id="searchButton"></i>
               </div>
             </div>
-            <p class="description" id="searchResult"></p>
-            <div class="orders">
-              <ul id="ordersList">
-              </ul>
+            <p id="searchResult"></p>
+            <div class="table-card">
+              <div class="table-header">
+                <h3>User Feedbacks</h3>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" name=""></th>
+                    <th>User</th>
+                    <th>Category</th>
+                    <th>Sub</th>
+                    <th>Content</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="productList">
+                </tbody>
+              </table> 
             </div>
 
             <div id="showMore">
@@ -96,32 +111,6 @@
       </div>
     </div>
   </div>
-
-  <div class="orderContent" id="orderContent">
-    <div class="order-card" id="orderCard">
-      <button class="close-btn" id="close">×</button>
-      <div id="printable-area">
-        <div class="order-header">
-          <h2 id="orderId"></h2>
-          <span class="status-badge" id="statusPayment"></span>
-        </div>
-        <div class="timestamp" id="timeDisplay"></div>
-
-        <div class="order-items" id="order-items">
-          <!-- Items will be injected here -->
-        </div>
-
-        <div class="total">
-          <span>Total</span>
-          <span id="total"></span>
-        </div>
-      </div>
-      <div class="button-group">
-        <button class="btn-proceed" id="proceed">Proceed</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="scripts/order.js" type="module" charset="utf-8" async defer></script>
+  <script src="scripts/feedback.js" type="module" charset="utf-8" async defer></script>
 </body>
 </html>
