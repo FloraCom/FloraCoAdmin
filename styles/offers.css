@@ -46,6 +46,7 @@ body, html {
 }
 
 .left {
+  flex-shrink: 0;
   background-color: var(--background-c);
   display: flex;
   flex-direction: column;
@@ -173,6 +174,7 @@ body, html {
 
 .description{
   color: gray;
+  font-size: 12px;
   padding: 10px 0;
   font-family: "Lato", sans-serif;
 }
@@ -180,6 +182,396 @@ body, html {
 .content{
   width: 100%;
   height: 100%;
+}
+
+.buttons{
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.addButton{
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+#cancelCoupon{
+  color: red;
+  background: none;
+  border: none;
+  cursor: pointer; 
+  padding: 5px 0;
+}
+
+
+.add{
+  display: flex;
+  background-color: lavenderblush;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 2px dashed purple;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  color: purple;
+  position: absolute;
+  top: 0;
+  left:  0;
+  cursor: pointer;
+}
+
+.adder{
+  display: flex;
+  background-color: lavenderblush;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 2px dashed purple;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  color: purple;
+  position: absolute;
+  top: 0;
+  left:  0;
+  cursor: pointer;
+}
+
+.add.close{
+  display: none;
+}
+
+.add:hover{
+  background-color: lavender;
+}
+
+.add i{
+  font-weight: 800;
+}
+
+.addCoupon {
+  width: 100%
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid purple;
+  background-color: lavender;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.addCoupon input{
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  border: 1px solid purple;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+#addCoupon{
+  width: 100%;
+  background-color: lavender;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: purple;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+}
+
+#addCoupon:hover{
+  background-color: purple;
+  color: lavender;
+}
+
+#couponAdd{
+  display: flex;
+}
+
+#createCoupon{
+  display: none;
+}
+
+.offerAddition{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #0000009f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.additionCard{
+  width: 50%;
+  min-width: 400px;
+  height: 100%;
+  background-color: lavender;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.addCard{
+  padding: 10px;
+}
+
+.imageBanner{
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+  min-height: 200px;
+  background-color: white;
+}
+
+.bannerContainer{
+  width: 100%;
+  min-height: 250px;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#banner{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inputField{
+  padding: 5px;
+}
+
+.inputField input{
+
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid purple;
+
+}
+
+.categorySelector {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#category{
+  flex: 0 0 20%;
+}
+
+.searchView{
+  flex: 0 0 70%;
+  display: flex;
+  justify-content: start;
+}
+
+.searchBar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#search{
+  width: 100%;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius:  5px 0 0 5px;
+  padding: 0 10px;
+  color: var(--primary-c);
+}
+
+option{
+  cursor: pointer;
+}
+
+#searchButton{
+  padding: 5px;
+  background-color: var(--primary-c);
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#searchButton:hover{
+  background-color: var(--secondary-c);
+}
+
+#searchResult{
+  font-weight: 800;
+  color: darkslateblue;
+}
+
+.itemsSelector{
+  width: 100%;
+}
+
+#items{
+  width: 100%;
+  height: 200px;
+}
+
+#items option{
+  padding: 5px;
+}
+
+#selectedItem{
+  width: 100%;
+}
+
+.submit{
+  width: 100%;
+  padding: 10px 0;
+}
+
+.submit button{
+  width: 100%;
+  background-color: lavender;
+  color: purple;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 8px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit button:hover{
+  background-color: purple;
+  color: lavender;
+}
+
+.cards{
+  display: flex;
+  gap:  10px;
+}
+
+#cancel{
+  color: red;
+}
+
+#cancel:hover{
+  color: white;
+  background-color: hotpink;
+}
+.delete{
+  color: red;
+  border: none;
+  width: 100%;
+  padding: 10px 5px;
+  background: none;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.delete:hover{
+  color: white;
+  background-color: hotpink;
+}
+
+.offerC{
+  width: 200px;
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.offerImage {
+  width: 100%;
+}
+
+.offerImage img{
+  width: 100%;
+}
+
+.description.closed{
+  display: none;
+}
+
+#toast {
+  display: none;
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  transform: translate(-50%);
+}
+
+#toast.show {
+  display: block;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+.couponC{
+  width: 200px;
+  height: auto;
+  background-color: lavender;
+  padding: 10px 0 0 0;
+  color: purple;
+  font-weight: 600;
+  border: 2px solid purple;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.offerDetails{
+  padding:  0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
 }
 
 @media screen and (max-width: 800px){

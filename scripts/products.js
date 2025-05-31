@@ -81,7 +81,6 @@ function populateContent(products) {
 
 	products.forEach((obj, index) => {
 
-
 		productDict[obj.id] = obj;
 
 		filterProducts.push(obj);
@@ -227,7 +226,7 @@ function display() {
 			});
 
 			document.getElementById('search').placeholder='Search '+String(category).replaceAll("-", " ");
-			
+
 			if (products) {
 				populateContent(products);
 			}

@@ -70,10 +70,116 @@
       <div class="rightContent">
           <div class="content">
             <h1>Offers</h1>
+            <div class="buttons">
+              <div class="addButton">
+                <div class="adder" id="couponAdd">
+                  <i class="fi fi-ss-plus"></i>
+                  <p>New Coupon</p>
+                </div>
+                <div class="addCoupon" id="couponCreate">
+                    <div>
+                      <input type="text" name="" id="cId" required placeholder="New ID">
+                    </div>
+                    <div>
+                      <input type="text" name="" id="cCode" required placeholder="New Code">
+                    </div>
+                    <div>
+                      <input type="text" name="" id="cDiscount" required placeholder="Discount">
+                    </div>
+                    <div>
+                      <input type="date" name="" id="cValidity" required placeholder="Validity">
+                    </div>
+                    <button id="addCoupon"> Add Coupon </button>
+                    <button id="cancelCoupon"> Cancel </button>
+                </div>
+              </div>            
+              <div class="addButton" id="createOffer">
+                <div class="add">
+                  <i class="fi fi-ss-plus"></i>
+                  <p>New Offer</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="couponCards" id="couponCards">
+              </div>
+              <div class="offerCards" id="offerCards">
+              </div>
+            </div>
+            <div class="offerAddition" id="offerAdd">
+              
+                <div class="additionCard">
+                  
+                  <form class="addCard" id="form">
+                    
+                    <div class="inputField">
+                      <label for="id">Offer ID:</label>
+                      <input type="text" id="offerId" required name="id" placeholder="Enter ID">
+                    </div>
+
+                    <div class="imageBanner">
+                      <a class="bannerContainer">
+                        <img src="" alt="" id="banner">
+                      </a>
+                    </div>
+                    <div class="inputField">
+                      <label for="Image">Offer Banner:</label>
+                      <input type="text" id="offerImage" required name="Image" placeholder="Enter Image URL">
+                    </div>
+                    <div class="inputField">
+                      <label for="name">Offer Name:</label>
+                      <input type="text" id="offerName" required id="name" placeholder="Enter Name">
+                    </div>
+                    <div class="inputField">
+                      <label for="discount">Offer Discount:</label>
+                      <input type="number" id="offerDiscount" required name="discount" placeholder="Enter Discount">
+                    </div>
+                    <div class="inputField">
+                      <label for="validity">Offer Validity:</label>
+                      <input type="date" id="offerValidity" required name="validity" placeholder="Enter Validity">
+                    </div>
+                    <div class="categorySelector">
+                      <select id="category">
+                        <option value="floral-supply">Floral Supply</option>
+                        <option value="plant">Plants</option>
+                        <option value="tree">Trees</option>
+                        <option value="seed">Seeds</option>
+                        <option value="bulb">Bulbs</option>
+                        <option value="soil">Soils</option>
+                        <option value="fertilizer">Fertilizers</option>
+                        <option value="pot-and-vase">Pots And Vases</option>
+                        <option value="gardening-tool">Gardening Tools</option>
+                      </select>
+                      <div class="searchView">
+                        <div class="searchBar">
+                          <input id="search" list="searchList" type="search" name="" value="" placeholder="Search ProductID or Name">
+                          <i class="fi fi-br-search" id="searchButton"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p id="searchResult" class="description"></p>
+
+                    <div id="itemsSelector">
+                      <select id="items" multiple>
+                        <option value=""></option>
+                      </select>
+                      <p id="selectedItems"></p>
+                    </div>
+
+                    <div class="submit">
+                      <button type="submit" name="Submit" id="submit" value="">Submit</button>
+                    </div>
+                    <div class="submit">
+                      <button type="submit" name="Submit" id="cancel" value="">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
           </div>
       </div>
     </div>
+    <div id="toast"></div>
   </div>
-  <script src="scripts/offers.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="scripts/offers.js" type="module" charset="utf-8" async defer></script>
 </body>
 </html>
