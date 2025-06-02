@@ -161,13 +161,13 @@ async function updateSales(isAll){
 		if (difference >= 0 || isNaN(difference)) {
 			document.getElementById('earningsDiv').innerHTML = `
 	            <i class="fi fi-ss-arrow-small-up"></i>
-	            <span id="earningsPercent">${difference}%</span>
+	            <span id="earningsPercent">${difference.toFixed(2)}%</span>
 			`;
 			document.getElementById('earningsDiv').classList.add('up');
 		}else{
 			document.getElementById('earningsDiv').innerHTML = `
 	            <i class="fi fi-ss-arrow-small-down"></i>
-	            <span id="earningsPercent">${difference}%</span>
+	            <span id="earningsPercent">${difference.toFixed(2)}%</span>
 			`;
 			document.getElementById('earningsDiv').classList.remove('up');
 		}
@@ -215,13 +215,13 @@ async function updateOrders(isAll){
 		if (difference >= 0) {
 			document.getElementById('ordersDiv').innerHTML = `
 	            <i class="fi fi-ss-arrow-small-up"></i>
-	            <span id="earningsPercent">${difference}%</span>
+	            <span id="earningsPercent">${difference.toFixed(2)}%</span>
 			`;
 			document.getElementById('ordersDiv').classList.add('up');
 		}else{
 			document.getElementById('ordersDiv').innerHTML = `
 	            <i class="fi fi-ss-arrow-small-down"></i>
-	            <span id="earningsPercent">${difference}%</span>
+	            <span id="earningsPercent">${difference.toFixed(2)}%</span>
 			`;
 			document.getElementById('ordersDiv').classList.remove('up');
 		}
